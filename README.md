@@ -16,9 +16,9 @@ flowchart TD
 
     subgraph Phase1["Phase 1 — Independent Research"]
         direction LR
-        C1["Claude\nresearches topic"]
-        C2["Codex\nresearches topic"]
-        C3["Gemini\nresearches topic"]
+        C1["Claude researches topic"]
+        C2["Codex researches topic"]
+        C3["Gemini researches topic"]
     end
 
     B --> C1 & C2 & C3
@@ -30,9 +30,9 @@ flowchart TD
 
     subgraph Phase2["Phase 2 — Cross-Pollination Refinement"]
         direction LR
-        D1["Claude reads all 3\nrefines its report"]
-        D2["Codex reads all 3\nrefines its report"]
-        D3["Gemini reads all 3\nrefines its report"]
+        D1["Claude reads all 3, refines"]
+        D2["Codex reads all 3, refines"]
+        D3["Gemini reads all 3, refines"]
     end
 
     D --> D1 & D2 & D3
@@ -43,7 +43,7 @@ flowchart TD
     E1 & E2 & E3 --> F["Phase 3: Synthesis"]
 
     subgraph Phase3["Phase 3 — Final Synthesis"]
-        F1["Main Claude synthesizes\nall refined reports"]
+        F1["Claude synthesizes all refined reports"]
     end
 
     F --> F1
