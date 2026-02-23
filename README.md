@@ -106,6 +106,11 @@ claude plugin install research-council@research-council
 /plugin install research-council@research-council
 ```
 
+### Upgrading
+```bash
+claude plugin update research-council@research-council
+```
+
 ### Manual installation (for development)
 ```bash
 git clone https://github.com/hamelsmu/research-council.git
