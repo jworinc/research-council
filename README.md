@@ -10,6 +10,8 @@ Run the `/deep-research` slash command inside Claude Code:
 /deep-research Next.js vs SvelteKit for production web apps in 2026: performance, DX, ecosystem maturity, and deployment options
 ```
 
+Each agent uses the **most powerful model** from its provider with **thinking/reasoning turned all the way up** (see [Models Used](#models-used)). A `--test` flag is available that swaps in small, cheap models for testing the pipeline.
+
 The plugin runs a 3-phase pipeline:
 
 1. **Independent Research** — All three agents research the topic simultaneously, each iterating with web searches until they're satisfied with depth and coverage
@@ -161,6 +163,8 @@ research/20260222-143000-a1b2c3/
 | Claude | `claude-opus-4-6` | effort: max |
 | Codex | `gpt-5.3-codex` | reasoning_effort: xhigh |
 | Gemini | `gemini-2.5-pro` | thinkingBudget: 24576 |
+
+> **Note:** We plan to move to [Gemini 3.1](https://ai.google.dev/gemini-api/docs/gemini-3) once it moves out of preview.
 
 ### Test mode (`--test`)
 
