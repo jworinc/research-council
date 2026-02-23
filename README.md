@@ -7,7 +7,7 @@ A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin that orch
 Run the `/deep-research` slash command inside Claude Code:
 
 ```
-/deep-research What are the economic and geopolitical implications of rare earth mineral supply chains?
+/deep-research Next.js vs SvelteKit for production web apps in 2026: performance, DX, ecosystem maturity, and deployment options
 ```
 
 The plugin runs a 3-phase pipeline:
