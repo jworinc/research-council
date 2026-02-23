@@ -1,0 +1,17 @@
+{
+  "description": "Deep Research Council: orchestrates parallel research across Claude, Codex, and Gemini",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/orchestrator-stop-hook.sh",
+            "timeout": 7200,
+            "statusMessage": "Research Council: running agents..."
+          }
+        ]
+      }
+    ]
+  }
+}
