@@ -12,6 +12,12 @@ Run the `/deep-research` slash command inside Claude Code:
 
 The plugin runs a 3-phase pipeline:
 
+1. **Independent Research** — All three agents research the topic simultaneously, each iterating with web searches until they're satisfied with depth and coverage
+2. **Cross-Pollination Refinement** — Each agent reads all three reports and refines its own, using the others as springboards for *new* investigation (not copying)
+3. **Synthesis** — Claude reads all refined reports and produces a single final report organized by theme
+
+The key insight is **cross-pollination**. Different AI providers have different training data, different search behaviors, and different analytical tendencies. When Agent A reads Agent B's report, it doesn't just absorb it — it finds angles it missed, contradictions to resolve, and gaps none of them covered. This produces research that's substantially deeper than any single agent could achieve alone, or than simply merging three independent reports.
+
 ```mermaid
 flowchart TD
     A["/deep-research &lt;topic&gt;"] --> B["Phase 1: Independent Research"]
@@ -52,7 +58,6 @@ flowchart TD
     F1 --> G["final-report.md"]
 ```
 
-Each agent iterates on its research (using web search, analysis, etc.) until it's satisfied with the depth and coverage, then signals completion. In Phase 2, agents use the other reports as springboards for **new** investigation — not just copying.
 
 ## Prerequisites
 
