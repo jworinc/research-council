@@ -1,11 +1,13 @@
 # Research Council
 
-A Claude Code plugin that orchestrates deep research across **three AI agents** in parallel — Claude, Codex, and Gemini — with cross-pollination refinement and final synthesis.
+A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin that orchestrates deep research across **three coding agents** — [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Codex CLI](https://github.com/openai/codex) (OpenAI), and [Gemini CLI](https://github.com/google-gemini/gemini-cli) (Google) — running in parallel with cross-pollination refinement and final synthesis.
 
 ## How it Works
 
+Run the `/deep-research` slash command inside Claude Code:
+
 ```
-/deep-research How do transformer attention mechanisms scale with sequence length?
+/deep-research What are the economic and geopolitical implications of rare earth mineral supply chains?
 ```
 
 The plugin runs a 3-phase pipeline:
@@ -108,12 +110,12 @@ claude --plugin-dir /path/to/research-council
 
 ### Full research (production models, up to 10 iterations per agent)
 ```
-/deep-research How do LLMs handle long-context reasoning?
+/deep-research What are the leading approaches to nuclear fusion energy and how close are they to commercialization?
 ```
 
 ### Test mode (cheap models, 2 iterations — for testing the pipeline)
 ```
-/deep-research --test What is the history of the Python programming language?
+/deep-research --test What is the history of the Panama Canal?
 ```
 
 ### Cancel an active session
