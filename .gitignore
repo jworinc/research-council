@@ -1,0 +1,13 @@
+# Research output (generated per-session)
+research/
+
+# Claude Code local state
+.claude/*.local.md
+.claude/*.log
+.claude/deep-research.log
+
+# Review loop artifacts
+reviews/
+
+# OS files
+.DS_Store
