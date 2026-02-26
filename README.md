@@ -1,6 +1,8 @@
-# Research Council
+# Deepsearch
 
 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin that orchestrates deep research across **three coding agents** — [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Codex CLI](https://github.com/openai/codex) (OpenAI), and [Gemini CLI](https://github.com/google-gemini/gemini-cli) (Google) — running in parallel with cross-pollination refinement and final synthesis.
+
+> **Vibeproxy Adaptation**: This version has been modified to route all model requests through [vibeproxy](https://vibeproxy.com/) for unified model access and management.
 
 ## How it Works
 
@@ -165,19 +167,20 @@ research/20260222-143000-a1b2c3/
 
 | Agent | Model | Reasoning |
 |-------|-------|-----------|
-| Claude | `claude-opus-4-6` | effort: max |
-| Codex | `gpt-5.3-codex` | reasoning_effort: xhigh |
-| Gemini | `gemini-2.5-pro` | thinkingBudget: 24576 |
+| GLM (Claude slot) | `vibeproxy/glm-4.7` | default |
+| Codex | `vibeproxy/gpt-5.3-codex` | reasoning_effort: xhigh |
+| Gemini | `vibeproxy/gemini-3-pro-high` | thinkingBudget: 24576 |
 
-> **Note:** We plan to move to [Gemini 3.1](https://ai.google.dev/gemini-api/docs/gemini-3) once it moves out of preview.
+> **Note:** All models are routed through [vibeproxy](https://vibeproxy.com/) for unified access and cost management.
+> GLM-4.7 replaces Claude in the orchestration slot for improved reasoning at lower cost.
 
 ### Test mode (`--test`)
 
 | Agent | Model | Reasoning |
 |-------|-------|-----------|
-| Claude | `claude-haiku-4-5-20251001` | default |
-| Codex | `gpt-5.1-codex-mini` | reasoning_effort: low |
-| Gemini | `gemini-2.5-flash-lite` | default |
+| GLM (Claude slot) | `vibeproxy/glm-4.7` | default |
+| Codex | `vibeproxy/gpt-5.3-codex` | reasoning_effort: low |
+| Gemini | `vibeproxy/gemini-3-pro-high` | default |
 
 ## How the Loop Mechanisms Work
 

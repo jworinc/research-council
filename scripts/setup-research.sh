@@ -124,19 +124,20 @@ fi
 RESEARCH_ID="$(date +%Y%m%d-%H%M%S)-${RAND_HEX}"
 
 # ── Determine model configuration ────────────────────────────────────────
+# Vibeproxy aliases for enhanced model routing
 if [ "$TEST_MODE" = true ]; then
   MAX_ITERS=2
-  CLAUDE_MODEL="claude-haiku-4-5-20251001"
-  CODEX_MODEL="gpt-5.1-codex-mini"
-  CODEX_REASONING="low"
-  GEMINI_MODEL="gemini-2.5-flash-lite"
+  CLAUDE_MODEL="vibeproxy/glm-4.7"
+  CODEX_MODEL="vibeproxy/gpt-5.3-codex"
+  CODEX_REASONING="xhigh"
+  GEMINI_MODEL="vibeproxy/gemini-3-pro-high"
   MODE_LABEL="TEST MODE (cheap models, 2 iterations)"
 else
   MAX_ITERS=10
-  CLAUDE_MODEL="claude-opus-4-6"
-  CODEX_MODEL="gpt-5.3-codex"
+  CLAUDE_MODEL="vibeproxy/glm-4.7"
+  CODEX_MODEL="vibeproxy/gpt-5.3-codex"
   CODEX_REASONING="xhigh"
-  GEMINI_MODEL="gemini-2.5-pro"
+  GEMINI_MODEL="vibeproxy/gemini-3-pro-high"
   MODE_LABEL="PRODUCTION (maximum reasoning depth)"
 fi
 
